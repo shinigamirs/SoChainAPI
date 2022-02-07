@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  nuri-sochainapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    dns:
+      - "8.8.8.8"
+    ports:
+      - "8080:8080"
