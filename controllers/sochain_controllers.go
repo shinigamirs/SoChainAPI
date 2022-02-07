@@ -8,7 +8,7 @@ import (
 
 func AddSochainRoutes(e *echo.Echo) {
 	t := e.Group("")
-	gt := infrastructure.NewSochainClient(domain.BaseURL)
-	t.GET("/currencies/:crypto/block-details/:blockHash", infrastructure.NewSochainAPIController(gt).GetBlockDetailsController)
-	t.GET("/currencies/:crypto/tx-details/:transactionId", infrastructure.NewSochainAPIController(gt).GetTxDetailsController)
+	sc := infrastructure.NewSochainClient(domain.BaseURL)
+	t.GET("/currencies/:crypto/block-details/:blockHash", infrastructure.NewSochainAPIController(sc).GetBlockDetailsController)
+	t.GET("/currencies/:crypto/tx-details/:transactionId", infrastructure.NewSochainAPIController(sc).GetTxDetailsController)
 }
