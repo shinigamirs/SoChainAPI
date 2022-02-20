@@ -1,4 +1,4 @@
-# Nuri-Rohit-Sharma-Coding-Challenge
+# Rohit-Sharma-Coding-Challenge
 
 This is web API interface from sochain to get Block details and Transaction details
 
